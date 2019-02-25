@@ -186,3 +186,59 @@ header {
 		margin-bottom: 2rem;
 	}
 }
+
+#cart-popup {
+	background: #f2f6f7;
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+	.cart-items {
+		.item {
+			width: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: relative;
+			padding: 70px 20px;
+			img {
+				width: 100%;
+				position: absolute;
+				left: -41px;
+				z-index: 1;
+				transform: rotate(90deg);
+			}
+			.delete-btn {
+				background: white;
+				width: 100%;
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				padding: 10px;
+				border-radius: 30px;
+				position: relative;
+				cursor: pointer;
+				&:hover {
+					.circle {
+						background: red;
+						transition: background .4s ease-in-out;
+					}
+				}
+			}
+			.circle {
+				background: #f2f6f7;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+			}
+		}
+	}
+}
